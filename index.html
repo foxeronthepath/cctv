@@ -57,10 +57,6 @@
         
 
         
-        .timestamp {
-            font-size: 12px;
-            color: #00ff00;
-        }
         
         /* Main video container */
         .video-container {
@@ -214,7 +210,6 @@
             <span class="info-label">[SYSTEM ACTIVE]</span> 
             <span class="info-value">CCTV MONITORING SYSTEM v2.4.7</span>
         </div>
-        <div class="timestamp" id="timestamp"></div>
     </div>
     
     <div class="video-container">
@@ -232,23 +227,6 @@
     </div>
     
     <script>
-        // Update timestamp
-        function updateTimestamp() {
-            const now = new Date();
-            const timestamp = now.toLocaleString('en-US', {
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false
-            });
-            document.getElementById('timestamp').textContent = `[${timestamp}]`;
-        }
-        
-        updateTimestamp();
-        setInterval(updateTimestamp, 1000);
         
         // Update uptime
         let uptimeSeconds = 0;
